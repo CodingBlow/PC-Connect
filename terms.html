@@ -1,70 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use | Printer Tech Reference</title>
-    <meta name="robots" content="noindex, follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Printer Configuration Portal | Setup & Drivers</title>
+  <meta name="description" content=" device configuration portal. Setup guides, driver installation, Wi-Fi connection fixes, and expert troubleshooting for all major printer models."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* SAME CSS AS PRIVACY PAGE */
-        :root { --primary: #2563eb; --text-dark: #1f2937; --bg-light: #f9fafb; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; margin: 0; padding: 0; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 16px 0; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-text h1 { font-size: 18px; font-weight: 700; color: var(--text-dark); margin:0; }
-        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 14px; margin-left: 24px; }
-        .nav-links a:hover { color: var(--primary); }
-        .policy-content { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e5e7eb; margin-top: 30px; }
-        h1 { font-size: 32px; margin-bottom: 10px; }
-        .date { color: #6b7280; font-size: 14px; margin-bottom: 30px; display: block; }
-        h2 { font-size: 20px; margin-top: 30px; margin-bottom: 15px; color: #111827; }
-        p { margin-bottom: 15px; color: #4b5563; }
-        footer { text-align: center; padding: 30px; color: #6b7280; font-size: 13px; border-top: 1px solid #e5e7eb; margin-top: 40px; }
-    </style>
+  <style>
+    :root {
+      --primary: #0f172a;       
+      --highlight: #2563eb;
+      --highlight-hover: #1d4ed8;
+      --bg-page: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #334155;
+      --text-light: #64748b;
+      --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; transition: all 0.2s ease; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* FLOATING CALL BUTTON */
+    .call-float {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #fff;
+      padding: 16px 24px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      box-shadow: 0 10px 30px rgba(37,99,235,0.5);
+      z-index: 9999;
+      animation: floatBounce 2s infinite;
+    }
+
+    .call-float:hover { transform: scale(1.08); }
+
+    .call-pulse {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 60px;
+      background: rgba(37,99,235,0.4);
+      animation: pulseRing 2s infinite;
+      z-index: -1;
+    }
+
+    @keyframes pulseRing {
+      0% { transform: scale(1); opacity: 0.7; }
+      70% { transform: scale(1.4); opacity: 0; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+
+    @keyframes floatBounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    @media(max-width:768px){
+      .call-text { display:none; }
+      .call-float { padding:18px; border-radius:50%; }
+    }
+  </style>
+
+  <script src="//code.jivosite.com/widget/MBoyuLfDpr" async></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17870679276"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17870679276');
+  </script>
 </head>
+
 <body>
 
-<header>
-    <div class="nav-container">
-        <div class="logo-text"><h1>Printer Guide</h1></div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="about.html">About</a>
-        </nav>
+  <!-- FLOATING CALL BUTTON -->
+  <a href="tel:+16146543738" class="call-float">
+      <span class="call-pulse"></span>
+      <i class="fas fa-phone"></i>
+      <span class="call-text">Call Now: +1 (614) 654-3738</span>
+  </a>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
+    <div class="container">
+      <h1>Select Your Brand for Instant Fix</h1>
+      <p>Click your printer brand below to automatically resolve offline errors, install drivers, and complete setup.</p>
+
+      <div class="brand-grid">
+        <a href="setup.html?brand=H" class="brand-box">
+          <img src="../Image/h.png">
+          <div class="setup-btn">Setup Now</div>
+        </a>
+
+        <a href="setup.html?brand=Br" class="brand-box">
+          <img src="../Image/br.png">
+          <div class="setup-btn">Setup Now</div>
+        </a>
+
+        <a href="setup.html?brand=Ep" class="brand-box">
+          <img src="../Image/ep.png">
+          <div class="setup-btn">Setup Now</div>
+        </a>
+
+        <a href="setup.html?brand=Ca" class="brand-box">
+          <img src="../Image/ca.jpg">
+          <div class="setup-btn">Setup Now</div>
+        </a>
+      </div>
     </div>
-</header>
+  </section>
 
-<div class="container">
-    <h1>Terms of Use</h1>
-    <span class="date">Last Updated: December 2025</span>
-
-    <div class="policy-content">
-        <p>Please read these Terms of Use ("Terms") carefully before using our website. By accessing this website, you agree to be bound by these Terms.</p>
-
-        <h2>1. Educational Purpose Only</h2>
-        <p>This website is an independent educational resource. The content provided is for general informational purposes only. We are <strong>not</strong> a technical support service provider, and we do not offer repair services, remote assistance, or official software downloads.</p>
-
-        <h2>2. No Affiliation</h2>
-        <p>We are an independent entity and are <strong>not affiliated with, endorsed by, or sponsored by</strong> any printer manufacturer (such as HP, Canon, Epson, Brother, etc.). All product names, logos, and brands are property of their respective owners and are used here solely for identification and educational purposes.</p>
-
-        <h2>3. User Responsibility</h2>
-        <p>You acknowledge that any actions you take based on the information on this website are at your own risk. We are not liable for any damage to your devices, data loss, or other issues that may arise from following general troubleshooting concepts.</p>
-
-        <h2>4. External Links</h2>
-        <p>Our website may contain links to third-party websites. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party web sites or services.</p>
-
-        <h2>5. Changes to Terms</h2>
-        <p>We reserve the right to modify or replace these Terms at any time. Your continued use of the website after any such changes constitutes your acceptance of the new Terms.</p>
+  <!-- ================= CONTACT SECTION ================= -->
+  <section class="contact-banner">
+    <div class="container">
+      <h2>Need Expert Assistance?</h2>
+      <p>Our technical specialists are available to resolve complex configuration issues.</p>
     </div>
-</div>
+  </section>
 
-<footer>
-    &copy; 2025 Independent Printer Reference Guide. All rights reserved.
-</footer>
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Device Configurator Portal. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
