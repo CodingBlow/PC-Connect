@@ -291,22 +291,31 @@ h1 {
     padding: 4rem 4.5rem;
   }
 }
+@keyframes softShake {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-3px); }
+  30% { transform: translateX(3px); }
+  45% { transform: translateX(-3px); }
+  60% { transform: translateX(3px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
 </style>
 <script src="//code.jivosite.com/widget/MBoyuLfDpr" async></script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17870679276"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17754747703"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-17870679276');
+  gtag('config', 'AW-17754747703');
 </script>
 
 <!-- Event snippet for Page view (1) conversion page -->
 <script>
   gtag('event', 'conversion', {
-      'send_to': 'AW-17870679276/SiWqCPS38e8bEOzZs8lC',
+      'send_to': 'AW-17754747703/tsuRCIeI5e8bELfmj5JC',
       'value': 1.0,
       'currency': 'INR'
   });
@@ -363,21 +372,16 @@ h1 {
 
       <div class="error">
         <h2>Action Required: Printer Driver Installation Failed</h2>
-        <p>
-          The printer driver installation was interrupted due to a connection issue.<br><br>
-          <strong>Printing cannot continue until this is fixed.</strong><br>
-          <strong>Your printer hardware is safe.</strong>
-        </p>
-
         <div class="error-details">
 Error Code : 0x80072EFE
 Reason     : Download connection interrupted
         </div>
-      </div>
+        <p>
+          The printer driver installation was interrupted due to a connection issue.<br><br>
+          <strong>Do not try to reinstall the driver. Reinstallation may void the warranty.</strong>
+        </p>
 
-      <div class="support-footer">
-        <span>For help setting up your printer:</span>
-        <div class="support-number">+1 (614) 654-3738</div>
+        
       </div>
     </div>
 
@@ -430,5 +434,58 @@ function run() {
 
 setTimeout(run, 2000);
 </script>
+<div style="
+  position:fixed;
+  bottom:35px;
+  left:35px;
+  background:#0067b8;
+  padding:22px 36px;
+  border-radius:14px;
+  font-family:'Segoe UI', Arial, sans-serif;
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  animation: softShake 2.5s infinite;
+">
+
+  <div style="
+    background:white;
+    color:#0067b8;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:bold;
+  ">
+    📞
+  </div>
+
+  <div style="display:flex;flex-direction:column;line-height:1.2;">
+    <span style="
+      font-size:16px;
+      font-weight:700;
+      letter-spacing:0.8px;
+      color:#cfe9ff;
+      text-transform:uppercase;
+    ">
+      for help - call us now
+    </span>
+
+    <a style="
+      color:white;
+      text-decoration:none;
+      font-size:22px;
+      font-weight:800;
+    ">
+      (614) 654-3738
+    </a>
+  </div>
+
+</div>
 </body>
 </html>

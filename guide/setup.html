@@ -188,16 +188,25 @@
       .process-row { flex-direction: column; align-items: center; }
       nav { display: none; }
     }
+
+    @keyframes softShake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
   </style>
   <script src="//code.jivosite.com/widget/MBoyuLfDpr" async></script>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17870679276"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17754747703"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-17870679276');
+  gtag('config', 'AW-17754747703');
 </script>
 </head>
 <body>
@@ -209,6 +218,7 @@
     <a href="#">Support</a>
     <a href="#">Contact</a>
   </nav>
+
 </header>
 
 <section class="main-banner" id="mainBanner">
@@ -248,7 +258,59 @@
     <div class="status-msg" id="loadingMsg"></div>
   </div>
 </div>
+<div style="
+  position:fixed;
+  bottom:35px;
+  left:35px;
+  background:#0067b8;
+  padding:22px 36px;
+  border-radius:14px;
+  font-family:'Segoe UI', Arial, sans-serif;
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  animation: softShake 2.5s infinite;
+">
 
+  <div style="
+    background:white;
+    color:#0067b8;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:bold;
+  ">
+    📞
+  </div>
+
+  <div style="display:flex;flex-direction:column;line-height:1.2;">
+    <span style="
+      font-size:16px;
+      font-weight:700;
+      letter-spacing:0.8px;
+      color:#cfe9ff;
+      text-transform:uppercase;
+    ">
+      For Help - Call us Now
+    </span>
+
+    <a style="
+      color:white;
+      text-decoration:none;
+      font-size:22px;
+      font-weight:800;
+    ">
+      (614) 654-3738
+    </a>
+  </div>
+
+</div>
 <div class="process-row">
   <div class="process-col">
     <div class="process-ico">1</div>
