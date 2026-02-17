@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Connection Type</title>
+
+<style>
+body{
+  margin:0;
+  font-family:"Segoe UI", Arial, sans-serif;
+  background:#f4f6f9;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.container{
+  background:#ffffff;
+  padding:50px;
+  border-radius:12px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
+  text-align:center;
+  width:90%;
+  max-width:500px;
+}
+
+h1{
+  margin-bottom:10px;
+  font-weight:600;
+  color:#222;
+}
+
+p{
+  margin-bottom:40px;
+  color:#666;
+}
+
+.option-box{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+}
+
+.option{
+  flex:1;
+  padding:30px 20px;
+  border:2px solid #0067b8;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s ease;
+  font-weight:600;
+  font-size:18px;
+  color:#0067b8;
+  background:white;
+}
+
+.option:hover{
+  background:#0067b8;
+  color:white;
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Select Connection Type</h1>
+  <p>Please choose how your printer is connected.</p>
+
+  <div class="option-box">
+    <div class="option" onclick="redirectUSB()">🔌 USB</div>
+    <div class="option" onclick="redirectWireless()">📶 Wireless</div>
+  </div>
+</div>
+
+<script>
+function redirectUSB(){
+  window.location.href = "usb-setup.html";
+}
+
+function redirectWireless(){
+  window.location.href = "wireless-setup.html";
+}
+</script>
+
+</body>
+</html>
